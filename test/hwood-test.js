@@ -8,7 +8,7 @@ describe("HWOOD", function () {
     await hwood.deployed();
 
     const totalSupply = await hwood.totalSupply()
-    console.log("HWOOD total supply: ", totalSupply);
+    console.log("HWOOD total supply: ", totalSupply.toString());
 
     expect(await hwood.balanceOf("0x77Efc7cf9aa6E775cD2b1c7eC6B9ac98acBa6F7A")).to.equal(totalSupply.mul(150).div(1000));
     expect(await hwood.balanceOf("0x350907A113e220d2205365fCcF88760f5832CFCD")).to.equal(totalSupply.mul(120).div(1000));
